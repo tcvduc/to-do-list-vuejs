@@ -24,6 +24,8 @@ npm --version
 git -v
 git --version
 
+5.
+
 ---
 II. Các lệnh Git
 1. Kéo 1 repo về máy 
@@ -34,4 +36,48 @@ git add .
 git commit -m "first commit"
 
 3. Đưa source code lên Git
+tải app Google Authenticator
+liên kết với Github
+lấy mã OTP 
+
 git push 
+
+chọn đăng nhập trên Browser
+
+4.
+
+
+---
+III. Kiến Thức VueJS
+1. Cách tải VueJS
+npm install vue
+npm i vue
+
+2. Cách tải VueJS các phiên bản mình chọn lựa
+npm install vue@^2
+npm install vue@^2.1.1
+
+3.
+
+---
+IV. Các lệnh NodeJS
+1. Kiểm tra phiên bản NodeJS
+node -v
+node --version
+
+2. Lệnh chạy app khi code xong
+Lưu lệnh trong file package.json
+  "scripts": {
+    "start: ""
+  }
+
+Ra Terminal gõ lệnh: "npm run start"
+
+3. Cài đặt Vue CLI, để gõ các lệnh VueJS trên Terminal
+npm install -g @vue/cli
+
+4. Kiểm tra phiên bản Vue CLI
+vue --version
+
+5. Tạo 1 Vue Project
+vue create project-name
