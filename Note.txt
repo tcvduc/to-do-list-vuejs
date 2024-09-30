@@ -1,0 +1,37 @@
+Note
+Mô tả: Ghi chú kiến thức
+---
+I. Một số thao tác khởi đầu cơ bản để học và làm dự án
+
+1. Cách mở settings.json để đưa code cài đặt setting
+Ấn tổ hợp phím: Ctrl + Shift + P
+Gõ: "settings.json"
+
+2. Cách mở Terminal để gõ các lệnh shell
+Ấn tổ hợp phím: Ctrl + `
+
+3. Cách tải VueJS 
+npm install vue
+npm install vue@^2
+
+4. Cách kiểm tra phiên bản NodeJS, NPM, Git
+node -v
+node --version
+
+npm -v
+npm --version
+
+git -v
+git --version
+
+---
+II. Các lệnh Git
+1. Kéo 1 repo về máy 
+git clone https://github.com/tcvduc/to-do-list-vuejs.git
+
+2. Lệnh lưu code
+git add .
+git commit -m "first commit"
+
+3. Đưa source code lên Git
+git push 
