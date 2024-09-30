@@ -81,3 +81,26 @@ vue --version
 
 5. Tạo 1 Vue Project
 vue create project-name
+
+6. Lệnh chạy app
+npm run serve
+
+7. Props
+Truyền biến qua các component
+  <HelloWorld learnVue="Học VueJS" />
+
+Gọi biến trong component
+<template>
+  <h1>{{ learnVue }}</h1>
+</template>
+
+<script>
+export default {
+  name: 'HelloWorld',
+  props: {
+    msg: String,
+    learnVue: String
+  }
+};
+</script>
+
