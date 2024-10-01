@@ -1,0 +1,28 @@
+CSS
+---
+1. Pseudo CSS
+
+.hai:nth-child(1) {
+  margin: 24px 0px 24px 24px;
+}
+
+
+2. class 
+.className{
+    margin: 0;
+}
+
+3. id
+#idName {
+    color: white;
+}
+
+4. Box
+*{
+    box-shizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+5. 
+

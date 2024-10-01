@@ -48,6 +48,11 @@ a {
         <h1 style="color: burlywood">{{ lamMotLyCaPhe }}</h1>
         <h1>{{ lamMotOBanhMy }}</h1>
       </div>
+
+      <div class="hai">
+        <h1 style="color: burlywood">{{ cum5 }}</h1>
+        <h1>{{ cum6 }}</h1>
+      </div>
     </div>
   </div>
 </template>
@@ -61,6 +66,8 @@ export default {
     chaoBuoiSang: String,
     lamMotLyCaPhe: String,
     lamMotOBanhMy: String,
+    cum5: String,
+    cum6: String,
   },
 };
 </script>
