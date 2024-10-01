@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld learnVue="Học VueJS" />
+    <HelloWorld hocVue="Học VueJS"  chaoBuoiSang="Chào Buổi Sáng" lamMotLyCaPhe="Làm Một Ly Cà Phê"  lamMotOBanhMy="Làm một ổ bánh mỳ"  />
   </div>
 
 </template>

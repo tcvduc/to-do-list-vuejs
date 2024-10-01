@@ -1,13 +1,6 @@
-<template>
-  <div class="hello">
-    <h1>{{ learnVue }}</h1>
-
-
-  </div>
-</template>
-
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
+<!-- css  -->
+
 <style scoped>
 h3 {
   margin: 40px 0 0;
@@ -28,13 +21,26 @@ a {
 }
 </style>
 
+<!-- web code  -->
+
+<template>
+  <div class="hello">
+    <h1>{{ hocVue }}</h1>
+    <h1>{{ chaoBuoiSang }}</h1>
+    <h1 style="color: burlywood">{{ lamMotLyCaPhe }}</h1>
+    <h1>{{ lamMotOBanhMy }}</h1>
+  </div>
+</template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
     msg: String,
-    learnVue: String
-  }
+    hocVue: String,
+    chaoBuoiSang: String,
+    lamMotLyCaPhe: String,
+    lamMotOBanhMy: String,
+  },
 };
 </script>
