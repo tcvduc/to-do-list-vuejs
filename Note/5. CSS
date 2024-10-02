@@ -35,3 +35,8 @@ input {
   border-color: #3dcf70;
   outline: #84db56;
 }
+
+8. Thay đổi kích thước viền border
+input {
+  border-width: 1px;
+}

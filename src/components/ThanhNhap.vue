@@ -1,6 +1,5 @@
 <style>
 .khungSuonThanhNhap {
-  border: 1px solid #000;
   height: 80px;
   width: 100%;
   padding: 28px 24px;
@@ -17,6 +16,7 @@
   font-size: 18px;
   border-radius: 3px;
   border-color: #465e72;
+  border-width: 1px;
 }
 
 .thanhNhap:focus {
@@ -33,11 +33,12 @@
   height: 40px;
   margin-left: 12px;
   cursor: pointer;
-  background-color: #b9c2ce;
+  background-color: #c4cfdd;
   font-size: 18px;
   border: 0;
   border-radius: 3px;
   font-weight: 500;
+  color: #283f52;
 }
 
 .nutThem:hover {
