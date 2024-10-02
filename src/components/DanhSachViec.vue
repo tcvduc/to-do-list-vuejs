@@ -19,30 +19,41 @@
 .khungSuon::-webkit-scrollbar-thumb {
   background-color: #abb3b9;
 }
-
-.thanhViec {
-  width: 100%;
-  height: 80px;
-  background-color: white;
-  margin-bottom: 24px;
-}
-
-.thanhViec:last-child {
-  margin-bottom: 0;
-}
 </style>
 
 <template>
   <div class="khungSuon">
-    <div class="thanhViec"></div>
-    <div class="thanhViec"></div>
-    <div class="thanhViec"></div>
-    <div class="thanhViec"></div>
-    <div class="thanhViec"></div>
-    <div class="thanhViec"></div>
+    <div
+      class="danhSachViec"
+      v-for="viec in danhSachViec"
+      :key="viec.ma"
+      v-bind="viec.ma"
+    >
+      <ThanhViec viec.ma viec.noiDung />
+    </div>
   </div>
 </template>
 
 <script>
-export default {};
+import ThanhViec from "./ThanhViec.vue";
+
+const danhSachViec = [];
+
+for (let i = 1; i <= 8; ++i) {
+  const viecThuI = {
+    ma: i,
+    noiDung: "Việc " + i,
+  };
+
+  danhSachViec.push(viecThuI);
+}
+
+console.log(danhSachViec);
+
+export default {
+  name: "DanhSachViec",
+  components: {
+    ThanhViec,
+  },
+};
 </script>
