@@ -24,5 +24,14 @@ CSS
     padding: 0;
 }
 
-5. 
+5. Chặn background text khi click chuột
+user-select: none;
 
+6. Bo tròn nút, bo tròn thành phần
+border-radius: 2px;
+
+7. Thay đổi màu viền ngoài input khi click chuột vào 
+input {
+  border-color: #3dcf70;
+  outline: #84db56;
+}

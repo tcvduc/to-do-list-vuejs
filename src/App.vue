@@ -1,50 +1,38 @@
 <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  --background-color: #a0c5df;
+  --title-color: #465e72;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background-color: var(--background-color);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 148px;
 }
 </style>
 
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld
-      cum5="Cụm 5"
-      cum6="Cụm 6"
-      hocVue="Học VueJS"
-      chaoBuoiSang="Chào Buổi Sáng"
-      lamMotLyCaPhe="Làm Một Ly Cà Phê"
-      lamMotOBanhMy="Làm một ổ bánh mỳ"
-    />
-
-    <BonOVuong so1="1" />
-
-    <BonOVuong />
+    <KhungSuonToDoList />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-import BonOVuong from "./components/BonOVuong.vue";
-
-// const props = {
-//   cum5: "Cụm 5",
-//   cum6: "Cụm 6",
-//   hocVue: "Học VueJS",
-//   chaoBuoiSang: "Chào Buổi Sáng",
-//   lamMotLyCaPhe: "Làm Một Ly Cà Phê",
-//   lamMotOBanhMy: "Làm một ổ bánh mỳ",
-// };
+import KhungSuonToDoList from "./components/KhungSuonToDoList.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
-    BonOVuong,
+    KhungSuonToDoList,
   },
 };
 </script>
