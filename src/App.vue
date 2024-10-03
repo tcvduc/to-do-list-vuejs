@@ -23,16 +23,19 @@
 <template>
   <div id="app">
     <KhungSuonToDoList />
+    <RenderArrayData />
   </div>
 </template>
 
 <script>
 import KhungSuonToDoList from "./components/KhungSuonToDoList.vue";
+import RenderArrayData from "./onboard/RenderArrayData.vue";
 
 export default {
   name: "App",
   components: {
     KhungSuonToDoList,
+    RenderArrayData,
   },
 };
 </script>

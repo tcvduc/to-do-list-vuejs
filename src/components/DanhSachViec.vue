@@ -1,6 +1,6 @@
 <style>
 .khungSuon {
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   height: 100%;
   width: 100%;
   padding: 0 24px 24px 24px;
@@ -23,13 +23,13 @@
 
 <template>
   <div class="khungSuon">
-    <div
-      class="danhSachViec"
-      v-for="viec in danhSachViec"
-      :key="viec.ma"
-      v-bind="viec.ma"
-    >
+    <div class="danhSachViec">
       <ThanhViec viec.ma viec.noiDung />
+      <ThanhViec viec.ma viec.noiDung />
+    </div>
+
+    <div v-for="item in items" :key="item.name">
+      {{ item.name }}
     </div>
   </div>
 </template>
@@ -48,12 +48,16 @@ for (let i = 1; i <= 8; ++i) {
   danhSachViec.push(viecThuI);
 }
 
-console.log(danhSachViec);
-
 export default {
   name: "DanhSachViec",
   components: {
     ThanhViec,
+  },
+
+  data: () => {
+    return {
+      items: [{ name: "Cà phê" }, { name: "Trà đặc" }, { name: "Bò húc" }],
+    };
   },
 };
 </script>
