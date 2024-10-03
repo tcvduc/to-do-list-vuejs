@@ -7,6 +7,9 @@
 
   --background-color: #a0c5df;
   --title-color: #465e72;
+
+  --practise-element-width: 450px;
+  --practise-element-height: 600px;
 }
 
 #app {
@@ -23,19 +26,20 @@
 <template>
   <div id="app">
     <KhungSuonToDoList />
-    <RenderArrayData />
+
+    <RenderArrayDataPractise1 />
   </div>
 </template>
 
 <script>
 import KhungSuonToDoList from "./components/KhungSuonToDoList.vue";
-import RenderArrayData from "./onboard/RenderArrayData.vue";
+import RenderArrayDataPractise1 from "./onboard/RenderArrayDataPractise1.vue";
 
 export default {
   name: "App",
   components: {
     KhungSuonToDoList,
-    RenderArrayData,
+    RenderArrayDataPractise1,
   },
 };
 </script>
