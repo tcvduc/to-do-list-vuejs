@@ -59,6 +59,19 @@ export default {
 vetur
 prettier
 
-9.
+9. Code khởi đầu Vue
+
+<style scoped>
+.frame {
+}
+</style>
+
+<template>
+  <div class="frame"></div>
+</template>
+
+<script>
+export default {};
+</script>
 
 

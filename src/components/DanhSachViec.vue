@@ -23,41 +23,17 @@
 
 <template>
   <div class="khungSuon">
-    <div class="danhSachViec">
-      <ThanhViec viec.ma viec.noiDung />
-      <ThanhViec viec.ma viec.noiDung />
-    </div>
-
-    <div v-for="item in items" :key="item.name">
-      {{ item.name }}
-    </div>
+    <div class="danhSachViec"></div>
   </div>
 </template>
 
 <script>
-import ThanhViec from "./ThanhViec.vue";
-
-const danhSachViec = [];
-
-for (let i = 1; i <= 8; ++i) {
-  const viecThuI = {
-    ma: i,
-    noiDung: "Việc " + i,
-  };
-
-  danhSachViec.push(viecThuI);
-}
-
 export default {
-  name: "DanhSachViec",
-  components: {
-    ThanhViec,
-  },
+  props: {},
+  components: {},
 
   data: () => {
-    return {
-      items: [{ name: "Cà phê" }, { name: "Trà đặc" }, { name: "Bò húc" }],
-    };
+    return {};
   },
 };
 </script>

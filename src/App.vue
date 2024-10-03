@@ -27,19 +27,19 @@
   <div id="app">
     <KhungSuonToDoList />
 
-    <RenderArrayDataPractise1 />
+    <PropOnboard />
   </div>
 </template>
 
 <script>
 import KhungSuonToDoList from "./components/KhungSuonToDoList.vue";
-import RenderArrayDataPractise1 from "./onboard/RenderArrayDataPractise1.vue";
+import PropOnboard from "./onboard/props/PropOnboard.vue";
 
 export default {
   name: "App",
   components: {
     KhungSuonToDoList,
-    RenderArrayDataPractise1,
+    PropOnboard,
   },
 };
 </script>
