@@ -53,8 +53,8 @@
 
     <div class="titleChildElement">Prop Type Object</div>
     <div class="food">
-      <div class="foodId">Food id {{ food.id }}</div>
-      <div class="foodName">Food name {{ food.name }}</div>
+      <div class="foodId">Food id {{ food.foodId }}</div>
+      <div class="foodName">Food name {{ food.foodName }}</div>
     </div>
   </div>
 </template>
@@ -62,12 +62,13 @@
 <script>
 export default {
   props: {
+    elementId: Number,
     title: String,
     content: Number,
     food: {
+      foodId: Number,
+      foodName: String,
       type: Object,
-      id: Number,
-      name: String,
     },
   },
 };
