@@ -23,7 +23,12 @@
 <template>
   <div class="khungSuon">
     <div class="danhSachViec">
-      <ThanhViecVue v-for="(task, i) in tasks" :key="i" :task="task" />
+      <ThanhViecVue
+        v-for="(task, i) in tasks"
+        :key="i"
+        :task="task"
+        :handleCloseButtonOnclick="handleCloseButtonOnclick"
+      />
     </div>
   </div>
 </template>
@@ -33,6 +38,7 @@ import ThanhViecVue from "./ThanhViec.vue";
 export default {
   props: {
     tasks: Array[String],
+    handleCloseButtonOnclick: Function,
   },
 
   components: {

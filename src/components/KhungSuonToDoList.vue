@@ -26,7 +26,10 @@
       :handleInputOnKeydown="handleInputOnKeydown"
       :handleAddButtonOnClick="handleAddButtonOnClick"
     />
-    <DanhSachViec :tasks="tasks" />
+    <DanhSachViec
+      :tasks="tasks"
+      :handleCloseButtonOnclick="handleCloseButtonOnclick"
+    />
   </div>
 </template>
 
@@ -71,6 +74,48 @@ function handleAddButtonOnClick() {
   return;
 }
 
+/**
+ *
+ * @param {String} s1
+ * @param {String} s2
+ * @returns {Boolean}
+ */
+function isTwoStringTheSame(s1, s2) {
+  if (!s1 || !s2) return false;
+  if (s1.length !== s2.length) return false;
+
+  let linhCanh = true;
+  let length = s1.length;
+
+  for (let i = 0; i <= length; ++i) {
+    if (s1[i] !== s2[i]) {
+      linhCanh = false;
+      break;
+    }
+  }
+
+  return linhCanh;
+}
+
+/**
+ *
+ * @param {String} task
+ */
+function handleCloseButtonOnclick(task) {
+  const tasks = this.tasks;
+
+  for (let i = 0; i <= tasks.length - 1; ++i) {
+    const taski = tasks[i];
+
+    if (isTwoStringTheSame(taski, task)) {
+      const index = i;
+      this.tasks.splice(index, 1);
+      i--;
+      break;
+    }
+  }
+}
+
 export default {
   name: "KhungSuongToDoList",
   components: {
@@ -85,6 +130,7 @@ export default {
   methods: {
     handleInputOnKeydown,
     handleAddButtonOnClick,
+    handleCloseButtonOnclick,
   },
 };
 </script>
