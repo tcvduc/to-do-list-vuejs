@@ -21,12 +21,14 @@
       :elementId="childElement.id"
       :content="childElement.content"
       :food="childElement.food"
+      :foodList="childElement.foodList"
     />
   </div>
 </template>
 
 <script>
 import ChildElement from "./ChildElement.vue";
+
 const elementType = {
   elementId: Number,
   title: String,
@@ -49,9 +51,37 @@ const childElementsType = {
         foodId: Number,
         foodName: String,
       },
+      foodList: {
+        type: Object,
+        foods: [
+          {
+            type: Object,
+            foodId: Number,
+            foodName: String,
+          },
+        ],
+      },
     }
   ],
 };
+
+/**
+ *
+ * @param {Number} number
+ */
+function createFoods(number) {
+  const foods = [];
+
+  for (let i = 1; i <= number; ++i) {
+    const food = {
+      foodId: i,
+      foodName: "Food " + i,
+    };
+    foods.push(food);
+  }
+
+  return foods;
+}
 
 const childElements = [];
 
@@ -63,6 +93,9 @@ for (let i = 1; i <= 4; ++i) {
     food: {
       foodId: i,
       foodName: "Food " + i,
+    },
+    foodList: {
+      foods: createFoods(8),
     },
   };
   childElements.push(element);

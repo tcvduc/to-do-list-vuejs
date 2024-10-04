@@ -56,6 +56,15 @@
       <div class="foodId">Food id {{ food.foodId }}</div>
       <div class="foodName">Food name {{ food.foodName }}</div>
     </div>
+
+    <div class="titleChildElement">Prop Type Array Of Object</div>
+
+    <div class="foodList">
+      <div class="food" v-for="food in foodList.foods" :key="food.foodId">
+        <div class="foodId">Food id {{ food.foodId }}</div>
+        <div class="foodName">Food name {{ food.foodName }}</div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -69,6 +78,16 @@ export default {
       foodId: Number,
       foodName: String,
       type: Object,
+    },
+    foodList: {
+      type: Object,
+      foods: [
+        {
+          foodId: Number,
+          foodName: String,
+          type: Object,
+        },
+      ],
     },
   },
 };
