@@ -26,18 +26,15 @@
 <template>
   <div id="app">
     <KhungSuonToDoList />
-    <FatherElement />
   </div>
 </template>
 
 <script>
 import KhungSuonToDoList from "./components/KhungSuonToDoList.vue";
-import FatherElement from "./onboard/props/FatherElement.vue";
 export default {
   name: "App",
   components: {
     KhungSuonToDoList,
-    FatherElement,
   },
 };
 </script>

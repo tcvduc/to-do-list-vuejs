@@ -52,11 +52,20 @@
 
 <template>
   <div class="khungSuonThanhNhap">
-    <input class="thanhNhap" type="text" placeholder="Nhập việc cần làm" />
+    <input
+      class="thanhNhap"
+      type="text"
+      placeholder="Nhập việc cần làm"
+      @keydown="handleInputOnKeydown"
+    />
     <button class="nutThem">Thêm</button>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    handleInputOnKeydown: Function,
+  },
+};
 </script>

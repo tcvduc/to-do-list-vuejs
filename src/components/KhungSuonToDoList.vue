@@ -22,19 +22,43 @@
   <div class="khungSuongToDoList">
     <div class="title">Việc Làm Hôm Nay</div>
 
-    <ThanhNhap />
-    <DanhSachViec />
+    <ThanhNhap :handleInputOnKeydown="handleInputOnKeydown" />
+    <DanhSachViec task="this is task" />
   </div>
 </template>
 
 <script>
 import ThanhNhap from "./ThanhNhap.vue";
 import DanhSachViec from "./DanhSachViec.vue";
+
+const classes = {
+  thanhNhap: "thanhNhap",
+};
+
+/**
+ *
+ * @param {KeyboardEvent} event
+ */
+function handleInputOnKeydown(event) {
+  const thanhNhap = window.document.getElementsByClassName(
+    classes.thanhNhap
+  )[0];
+
+  if (event.key === "Enter") {
+    const task = thanhNhap.value;
+    console.log(task);
+    return task;
+  }
+}
+
 export default {
   name: "KhungSuongToDoList",
   components: {
     ThanhNhap,
     DanhSachViec,
+  },
+  methods: {
+    handleInputOnKeydown,
   },
 };
 </script>

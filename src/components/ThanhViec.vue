@@ -4,6 +4,8 @@
   height: 80px;
   background-color: white;
   margin-bottom: 24px;
+  padding: 24px;
+  font-size: 24px;
 }
 
 .thanhViec:last-child {
@@ -12,7 +14,13 @@
 </style>
 
 <template>
-  <div class="thanhViec"></div>
+  <div class="thanhViec">{{ task }}</div>
 </template>
 
-<script></script>
+<script>
+export default {
+  props: {
+    task: String,
+  },
+};
+</script>

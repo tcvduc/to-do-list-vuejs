@@ -1,11 +1,10 @@
 <style>
 .khungSuon {
-  /* border: 1px solid #000; */
   height: 100%;
   width: 100%;
   padding: 0 24px 24px 24px;
   font-size: 18px;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 
 .khungSuon::-webkit-scrollbar {
@@ -23,14 +22,22 @@
 
 <template>
   <div class="khungSuon">
-    <div class="danhSachViec"></div>
+    <div class="danhSachViec">
+      <ThanhViecVue :task="task" />
+    </div>
   </div>
 </template>
 
 <script>
+import ThanhViecVue from "./ThanhViec.vue";
 export default {
-  props: {},
-  components: {},
+  props: {
+    task: String,
+  },
+
+  components: {
+    ThanhViecVue,
+  },
 
   data: () => {
     return {};
