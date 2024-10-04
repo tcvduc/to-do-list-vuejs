@@ -23,7 +23,7 @@
     <div class="title">Việc Làm Hôm Nay</div>
 
     <ThanhNhap :handleInputOnKeydown="handleInputOnKeydown" />
-    <DanhSachViec task="this is task" />
+    <DanhSachViec :task="task" />
   </div>
 </template>
 
@@ -47,6 +47,7 @@ function handleInputOnKeydown(event) {
   if (event.key === "Enter") {
     const task = thanhNhap.value;
     console.log(task);
+    this.task = task;
     return task;
   }
 }
@@ -56,6 +57,11 @@ export default {
   components: {
     ThanhNhap,
     DanhSachViec,
+  },
+  data: () => {
+    return {
+      task: "",
+    };
   },
   methods: {
     handleInputOnKeydown,
