@@ -58,7 +58,7 @@
       placeholder="Nhập việc cần làm"
       @keydown="handleInputOnKeydown"
     />
-    <button class="nutThem">Thêm</button>
+    <button class="nutThem" @click="handleAddButtonOnClick">Thêm</button>
   </div>
 </template>
 
@@ -66,6 +66,7 @@
 export default {
   props: {
     handleInputOnKeydown: Function,
+    handleAddButtonOnClick: Function,
   },
 };
 </script>

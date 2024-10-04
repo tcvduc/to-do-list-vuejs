@@ -22,7 +22,10 @@
   <div class="khungSuongToDoList">
     <div class="title">Việc Làm Hôm Nay</div>
 
-    <ThanhNhap :handleInputOnKeydown="handleInputOnKeydown" />
+    <ThanhNhap
+      :handleInputOnKeydown="handleInputOnKeydown"
+      :handleAddButtonOnClick="handleAddButtonOnClick"
+    />
     <DanhSachViec :tasks="tasks" />
   </div>
 </template>
@@ -52,6 +55,22 @@ function handleInputOnKeydown(event) {
   }
 }
 
+function handleAddButtonOnClick() {
+  const thanhNhap = window.document.getElementsByClassName(
+    classes.thanhNhap
+  )[0];
+  const inputValue = thanhNhap.value;
+
+  if (inputValue === "") {
+    return;
+  }
+
+  this.tasks.push(inputValue);
+  thanhNhap.value = "";
+
+  return;
+}
+
 export default {
   name: "KhungSuongToDoList",
   components: {
@@ -65,6 +84,7 @@ export default {
   },
   methods: {
     handleInputOnKeydown,
+    handleAddButtonOnClick,
   },
 };
 </script>
