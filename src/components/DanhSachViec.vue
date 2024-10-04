@@ -4,7 +4,7 @@
   width: 100%;
   padding: 0 24px 24px 24px;
   font-size: 18px;
-  overflow-y: hidden;
+  overflow-y: scroll;
 }
 
 .khungSuon::-webkit-scrollbar {
@@ -12,7 +12,7 @@
 }
 
 .khungSuon::-webkit-scrollbar-track {
-  background-color: #c0cad1;
+  background-color: #d8eaf9;
 }
 
 .khungSuon::-webkit-scrollbar-thumb {
@@ -23,7 +23,7 @@
 <template>
   <div class="khungSuon">
     <div class="danhSachViec">
-      <ThanhViecVue :task="task" />
+      <ThanhViecVue v-for="task in tasks" :key="task" :task="task" />
     </div>
   </div>
 </template>
@@ -32,7 +32,7 @@
 import ThanhViecVue from "./ThanhViec.vue";
 export default {
   props: {
-    task: String,
+    tasks: Array[String],
   },
 
   components: {
