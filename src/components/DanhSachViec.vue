@@ -23,7 +23,7 @@
 <template>
   <div class="khungSuon">
     <div class="danhSachViec">
-      <ThanhViecVue v-for="task in tasks" :key="task" :task="task" />
+      <ThanhViecVue v-for="(task, i) in tasks" :key="i" :task="task" />
     </div>
   </div>
 </template>
