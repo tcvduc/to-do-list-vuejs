@@ -75,3 +75,30 @@ export default {};
 </script>
 
 
+10. truyền props nhiều kiểu dữ liệu
+<template>
+  <div class="frameFatherElement">
+    <ChildElement
+      v-for="childElement in childElements"
+      :key="childElement.id"
+      :title="childElement.title"
+      :elementId="childElement.id"
+      :content="childElement.content"
+      :food="childElement.food"
+    />
+  </div>
+</template>
+
+
+<script>
+const elementType = {
+  elementId: Number,
+  title: String,
+  content: Number,
+  food: {
+    type: Object,
+    foodId: Number,
+    foodName: String,
+  },
+};
+</script>

@@ -40,3 +40,20 @@ input {
 input {
   border-width: 1px;
 }
+
+9. Khi code nhiều component nhưng chỉ hiển thị một
+số component
+Case 1: Giới hạn height
+- Lý do là vì đã giới hạn height, hoặc width của một element nào đó
+.element {
+  width: 100vw;
+  height: 100vh;
+}
+
+- Sửa lại: xóa dòng height đi
+.element {
+  width: 100vw;
+}
+
+Case 2: Xóa justify-content là ok
+

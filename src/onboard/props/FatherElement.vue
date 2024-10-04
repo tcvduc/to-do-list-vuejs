@@ -6,7 +6,6 @@
   margin-left: 24px;
   padding: 24px;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   overflow-y: scroll;
@@ -16,10 +15,12 @@
 <template>
   <div class="frameFatherElement">
     <ChildElement
-      :elementId="1"
-      title="Element 1"
-      :content="1"
-      :food="{ foodId: 1, foodName: 'Bread Sweet' }"
+      v-for="childElement in childElements"
+      :key="childElement.id"
+      :title="childElement.title"
+      :elementId="childElement.id"
+      :content="childElement.content"
+      :food="childElement.food"
     />
   </div>
 </template>
@@ -54,7 +55,7 @@ const childElementsType = {
 
 const childElements = [];
 
-for (let i = 1; i <= 8; ++i) {
+for (let i = 1; i <= 4; ++i) {
   const element = {
     elementId: i,
     title: "Element " + i,
