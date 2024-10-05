@@ -55,10 +55,10 @@
     <input
       class="thanhNhap"
       type="text"
-      placeholder="Nhập việc cần làm"
+      placeholder="Enter task"
       @keydown="handleInputOnKeydown"
     />
-    <button class="nutThem" @click="handleAddButtonOnClick">Thêm</button>
+    <button class="nutThem" @click="handleAddButtonOnClick">Add</button>
   </div>
 </template>
 

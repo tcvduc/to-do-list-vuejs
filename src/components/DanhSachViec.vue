@@ -2,7 +2,7 @@
 .khungSuon {
   height: 100%;
   width: 100%;
-  padding: 0 24px 24px 24px;
+  padding: 0 9px 24px 24px;
   font-size: 18px;
   overflow-y: scroll;
 }

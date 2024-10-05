@@ -16,26 +16,35 @@
   justify-content: center;
   margin-top: 24px;
 }
+
+.frame {
+  display: flex;
+}
 </style>
 
 <template>
-  <div class="khungSuongToDoList">
-    <div class="title">Việc Làm Hôm Nay</div>
+  <div class="frame">
+    <div class="khungSuongToDoList">
+      <div class="title">To Do List</div>
 
-    <ThanhNhap
-      :handleInputOnKeydown="handleInputOnKeydown"
-      :handleAddButtonOnClick="handleAddButtonOnClick"
-    />
-    <DanhSachViec
-      :tasks="tasks"
-      :handleCloseButtonOnclick="handleCloseButtonOnclick"
-    />
+      <ThanhNhap
+        :handleInputOnKeydown="handleInputOnKeydown"
+        :handleAddButtonOnClick="handleAddButtonOnClick"
+      />
+      <DanhSachViec
+        :tasks="tasks"
+        :handleCloseButtonOnclick="handleCloseButtonOnclick"
+      />
+    </div>
+
+    <StatisticComponent />
   </div>
 </template>
 
 <script>
 import ThanhNhap from "./ThanhNhap.vue";
 import DanhSachViec from "./DanhSachViec.vue";
+import StatisticComponent from "./StatisticComponent.vue";
 
 const classes = {
   thanhNhap: "thanhNhap",
@@ -121,6 +130,7 @@ export default {
   components: {
     ThanhNhap,
     DanhSachViec,
+    StatisticComponent,
   },
   data: () => {
     return {
