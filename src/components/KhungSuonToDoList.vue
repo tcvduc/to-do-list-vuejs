@@ -25,7 +25,7 @@
 <template>
   <div class="frame">
     <div class="khungSuongToDoList">
-      <div :getData="getData()"></div>
+      <!-- <div :getData="getData()"></div> -->
       <div class="title">To Do List</div>
 
       <ThanhNhap
@@ -154,8 +154,11 @@ export default {
   },
   mounted: function () {
     const url = "https://jsonplaceholder.typicode.com/posts";
-    axios.get(url).then(function () {
-      // this.tasks = response;
+    axios.get(url).then((res) => {
+      for (let i = 0; i <= res.data.length - 1 - 90; ++i) {
+        this.tasks.push(res.data[i].title);
+      }
+      console.log(this.tasks);
     });
   },
 };
