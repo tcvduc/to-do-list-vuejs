@@ -38,7 +38,8 @@
         :handleCloseButtonOnclick="handleCloseButtonOnclick"
       />
     </div>
-    <StatisticComponent />
+
+    <StatisticComponent :count-task="countTask" />
   </div>
 </template>
 
@@ -48,10 +49,14 @@ import DanhSachViec from "./DanhSachViec.vue";
 import axios from "axios";
 import StatisticComponent from "./StatisticComponent.vue";
 import RouteComponent from "./RouteComponent.vue";
+import Vue from "vue";
+import VueRouter from "vue-router";
 
 const classes = {
   thanhNhap: "thanhNhap",
 };
+
+Vue.use(VueRouter);
 
 /**
  *
@@ -139,6 +144,8 @@ export default {
   data: function () {
     return {
       tasks: [],
+      countTask: 0,
+      currentRoute: window.location.pathname,
     };
   },
   methods: {
@@ -146,11 +153,15 @@ export default {
     handleAddButtonOnClick,
     handleCloseButtonOnclick,
   },
+
+  computed: {},
+
   mounted: function () {
     const url = "https://jsonplaceholder.typicode.com/posts";
     axios.get(url).then((res) => {
       for (let i = 0; i <= res.data.length - 1 - 90; ++i) {
         this.tasks.push(res.data[i].title);
+        this.countTask = res.data.length - 90;
       }
     });
   },

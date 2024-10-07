@@ -30,13 +30,20 @@
   <div class="routeFrame">
     <div class="routeTitle">Route</div>
     <div class="routeList">
-      <div class="route">r1</div>
-      <div class="route">r2</div>
-      <div class="route">r3</div>
+      <div class="route">Home</div>
+      <div class="route">Merchan</div>
+      <div class="route">Footer</div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+// import Vue from "vue";
+// import KhungSuonToDoList from "./KhungSuonToDoList.vue";
+// import WebPageHome from "./WebPageHome.vue";
+// import VueRouter from "vue-router";
+
+export default {
+  methods: {},
+};
 </script>
