@@ -24,8 +24,9 @@
 
 <template>
   <div class="frame">
+    <RouteComponent />
+
     <div class="khungSuongToDoList">
-      <!-- <div :getData="getData()"></div> -->
       <div class="title">To Do List</div>
 
       <ThanhNhap
@@ -37,6 +38,7 @@
         :handleCloseButtonOnclick="handleCloseButtonOnclick"
       />
     </div>
+    <StatisticComponent />
   </div>
 </template>
 
@@ -44,6 +46,8 @@
 import ThanhNhap from "./ThanhNhap.vue";
 import DanhSachViec from "./DanhSachViec.vue";
 import axios from "axios";
+import StatisticComponent from "./StatisticComponent.vue";
+import RouteComponent from "./RouteComponent.vue";
 
 const classes = {
   thanhNhap: "thanhNhap",
@@ -124,22 +128,13 @@ function handleCloseButtonOnclick(task) {
   }
 }
 
-function getData() {
-  const url = "https://jsonplaceholder.typicode.com/posts";
-  axios.get(url).then((response) => {
-    console.log(response.data);
-    const responseData = response.data;
-
-    console.log(responseData.data);
-    console.log(this.tasks);
-  });
-}
-
 export default {
   name: "KhungSuongToDoList",
   components: {
     ThanhNhap,
     DanhSachViec,
+    StatisticComponent,
+    RouteComponent,
   },
   data: function () {
     return {
@@ -150,7 +145,6 @@ export default {
     handleInputOnKeydown,
     handleAddButtonOnClick,
     handleCloseButtonOnclick,
-    getData,
   },
   mounted: function () {
     const url = "https://jsonplaceholder.typicode.com/posts";
@@ -158,7 +152,6 @@ export default {
       for (let i = 0; i <= res.data.length - 1 - 90; ++i) {
         this.tasks.push(res.data[i].title);
       }
-      console.log(this.tasks);
     });
   },
 };
