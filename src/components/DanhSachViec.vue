@@ -18,11 +18,17 @@
 .khungSuon::-webkit-scrollbar-thumb {
   background-color: #abb3b9;
 }
+.loadingText {
+  color: var(--title-color);
+  font-size: 24px;
+}
 </style>
 
 <template>
   <div class="khungSuon">
-    <div class="danhSachViec">
+    <div v-if="countTask === 0" class="loadingText">Loading...</div>
+
+    <div class="danhSachViec" v-else>
       <ThanhViecVue
         v-for="(task, i) in tasks"
         :key="i"
@@ -38,6 +44,7 @@ import ThanhViecVue from "./ThanhViec.vue";
 export default {
   props: {
     tasks: Array[String],
+    countTask: Number,
     handleCloseButtonOnclick: Function,
   },
 

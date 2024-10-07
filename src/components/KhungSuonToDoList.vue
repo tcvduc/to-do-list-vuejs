@@ -36,6 +36,7 @@
       <DanhSachViec
         :tasks="tasks"
         :handleCloseButtonOnclick="handleCloseButtonOnclick"
+        :count-task="countTask"
       />
     </div>
 
@@ -161,7 +162,9 @@ export default {
     axios.get(url).then((res) => {
       for (let i = 0; i <= res.data.length - 1 - 90; ++i) {
         this.tasks.push(res.data[i].title);
-        this.countTask = res.data.length - 90;
+        window.setTimeout(() => {
+          this.countTask = res.data.length - 90;
+        }, 1300);
       }
     });
   },
