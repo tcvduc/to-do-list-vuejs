@@ -151,8 +151,6 @@ export default {
     handleCloseButtonOnclick,
   },
 
-  computed: {},
-
   mounted: function () {
     const url = "https://jsonplaceholder.typicode.com/posts";
     axios.get(url).then((res) => {

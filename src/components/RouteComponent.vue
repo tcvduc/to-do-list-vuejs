@@ -1,6 +1,6 @@
 <style>
 .routeFrame {
-  width: 200px;
+  width: 300px;
   height: 300px;
   border: 1px solid #000;
   display: flex;
@@ -24,15 +24,24 @@
   font-weight: 500;
   color: #465e72;
 }
+.subRouters {
+  padding-left: 12px;
+}
 </style>
 
 <template>
   <div class="routeFrame">
     <div class="routeTitle">Route</div>
     <div class="routeList">
-      <div class="route">Home</div>
+      <div class="route">
+        Vue Router
+        <div class="subRouters">
+          <div class="subRouter">Router Link</div>
+          <div class="subRouter">Router View</div>
+        </div>
+      </div>
+      <div class="route">Web Page Home</div>
       <div class="route">Merchan</div>
-      <div class="route">Footer</div>
     </div>
   </div>
 </template>
