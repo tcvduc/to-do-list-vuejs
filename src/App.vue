@@ -25,17 +25,13 @@
 
 <template>
   <div id="app">
-    <KhungSuonToDoList />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import KhungSuonToDoList from "./components/KhungSuonToDoList.vue";
-
 export default {
   name: "App",
-  components: {
-    KhungSuonToDoList,
-  },
+  components: {},
 };
 </script>

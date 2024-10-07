@@ -50,14 +50,10 @@ import DanhSachViec from "./DanhSachViec.vue";
 import axios from "axios";
 import StatisticComponent from "./StatisticComponent.vue";
 import RouteComponent from "./RouteComponent.vue";
-import Vue from "vue";
-import VueRouter from "vue-router";
 
 const classes = {
   thanhNhap: "thanhNhap",
 };
-
-Vue.use(VueRouter);
 
 /**
  *
