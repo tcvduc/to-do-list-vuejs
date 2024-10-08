@@ -1,7 +1,7 @@
 import KhungSuonToDoList from "./components/KhungSuonToDoList.vue";
 import WebPageHome from "./components/WebPageHome.vue";
-import RouterLink from "./onboard/VueRouter/RouterLink/RouterLink.vue";
-import RouterView from "./onboard/VueRouter/RouterView/RouterView.vue";
+import RouterLink from "./components/onboard/VueRouter/RouterLink/RouterLink.vue";
+import RouterView from "./components/onboard/VueRouter/RouterView/RouterView.vue";
 
 const routers = [
   {

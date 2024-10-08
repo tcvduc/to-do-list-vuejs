@@ -26,9 +26,9 @@
   <div class="frame">
     <RouteComponent />
 
-    <router-view> </router-view>
-
     <div class="khungSuongToDoList">
+      <router-view> </router-view>
+
       <div class="title">To Do List</div>
 
       <ThanhNhap
@@ -139,6 +139,11 @@ export default {
     DanhSachViec,
     StatisticComponent,
     RouteComponent,
+  },
+  computed: {
+    username() {
+      return this.$route.params.username;
+    },
   },
   data: function () {
     return {
