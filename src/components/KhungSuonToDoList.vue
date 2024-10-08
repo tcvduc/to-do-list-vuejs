@@ -24,11 +24,7 @@
 
 <template>
   <div class="frame">
-    <RouteComponent />
-
     <div class="khungSuongToDoList">
-      <router-view> </router-view>
-
       <div class="title">To Do List</div>
 
       <ThanhNhap
@@ -39,6 +35,7 @@
         :tasks="tasks"
         :handleCloseButtonOnclick="handleCloseButtonOnclick"
         :count-task="countTask"
+        :flag="flag"
       />
     </div>
 
@@ -51,7 +48,6 @@ import ThanhNhap from "./ThanhNhap.vue";
 import DanhSachViec from "./DanhSachViec.vue";
 import axios from "axios";
 import StatisticComponent from "./StatisticComponent.vue";
-import RouteComponent from "./RouteComponent.vue";
 
 const classes = {
   thanhNhap: "thanhNhap",
@@ -138,18 +134,13 @@ export default {
     ThanhNhap,
     DanhSachViec,
     StatisticComponent,
-    RouteComponent,
   },
-  computed: {
-    username() {
-      return this.$route.params.username;
-    },
-  },
+
   data: function () {
     return {
       tasks: [],
+      flag: true,
       countTask: 0,
-      currentRoute: window.location.pathname,
     };
   },
   methods: {
@@ -159,15 +150,20 @@ export default {
   },
 
   mounted: function () {
-    const url = "https://jsonplaceholder.typicode.com/posts";
-    axios.get(url).then((res) => {
-      for (let i = 0; i <= res.data.length - 1 - 90; ++i) {
-        this.tasks.push(res.data[i].title);
-        window.setTimeout(() => {
-          this.countTask = res.data.length - 90;
-        }, 1300);
-      }
-    });
+    try {
+      const url = "https://jsonplaceholder.typicode.com/posts";
+      axios.get(url).then((res) => {
+        for (let i = 0; i <= res.data.length - 1 - 90; ++i) {
+          this.tasks.push(res.data[i].title);
+          window.setTimeout(() => {
+            this.countTask = res.data.length - 90;
+          }, 1300);
+        }
+      });
+    } catch (error) {
+      console.log("can't get data");
+      this.flag = false;
+    }
   },
 };
 </script>

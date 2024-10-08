@@ -26,16 +26,20 @@
 
 <template>
   <div class="khungSuon">
-    <div v-if="countTask === 0" class="loadingText">Loading...</div>
+    <div v-if="flag === true">
+      <div v-if="countTask === 0" class="loadingText">Loading...</div>
 
-    <div class="danhSachViec" v-else>
-      <ThanhViecVue
-        v-for="(task, i) in tasks"
-        :key="i"
-        :task="task"
-        :handleCloseButtonOnclick="handleCloseButtonOnclick"
-      />
+      <div class="danhSachViec" v-else>
+        <ThanhViecVue
+          v-for="(task, i) in tasks"
+          :key="i"
+          :task="task"
+          :handleCloseButtonOnclick="handleCloseButtonOnclick"
+        />
+      </div>
     </div>
+
+    <div v-else>Can't get data</div>
   </div>
 </template>
 
@@ -46,14 +50,11 @@ export default {
     tasks: Array[String],
     countTask: Number,
     handleCloseButtonOnclick: Function,
+    flag: Boolean,
   },
 
   components: {
     ThanhViecVue,
-  },
-
-  data: () => {
-    return {};
   },
 };
 </script>

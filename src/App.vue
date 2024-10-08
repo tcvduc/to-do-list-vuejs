@@ -18,23 +18,31 @@
   width: 100vw;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding-bottom: 148px;
+  padding-top: 46px;
 }
 </style>
 
 <template>
   <div id="app">
-    <KhungSuonToDoList />
+    <RouteComponent />
+
+    <RouterView />
   </div>
 </template>
 
+<script setup>
+import RouteComponent from "./components/RouteComponent.vue";
+import { RouterView } from "vue-router";
+</script>
+
 <script>
-import KhungSuonToDoList from "./components/KhungSuonToDoList.vue";
 export default {
   name: "App",
   components: {
-    KhungSuonToDoList,
+    RouteComponent,
+    RouterView,
   },
 };
 </script>

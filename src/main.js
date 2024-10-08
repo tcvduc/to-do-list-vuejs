@@ -3,12 +3,10 @@ import App from "./App.vue";
 import VueRouter from "vue-router";
 import Routers from "./routers";
 
-Vue.config.productionTip = false;
-
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-  routers: Routers,
+  routes: Routers,
   mode: "history",
 });
 

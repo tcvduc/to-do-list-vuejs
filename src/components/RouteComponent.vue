@@ -17,7 +17,6 @@
 .routeList {
   display: flex;
   flex-direction: column;
-  margin-top: 24px;
 }
 .route {
   font-size: 24px;
@@ -37,28 +36,34 @@ a {
   <div class="routeFrame">
     <div class="routeTitle">Route</div>
     <div class="routeList">
-      <router-link class="route" to="/home">Home</router-link>
+      <RouterLink class="route" to="/home">Home</RouterLink>
 
       <div class="route">
         Vue Router
         <div class="subRouters">
-          <router-link class="subRouter" to="/onboard/routerLink">
+          <RouterLink class="subRouter" to="/onboard/routerLink">
             Router Link
-          </router-link>
+          </RouterLink>
 
           <br />
 
-          <router-link class="subRouter" to="/onboard/routerView">
+          <RouterLink class="subRouter" to="/onboard/routerView">
             Router View
-          </router-link>
+          </RouterLink>
         </div>
       </div>
 
-      <router-link class="route" to="/merchan">Merchan</router-link>
+      <RouterLink class="route" to="/merchan">Merchan</RouterLink>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import { RouterLink } from "vue-router";
+
+export default {
+  components: {
+    RouterLink,
+  },
+};
 </script>

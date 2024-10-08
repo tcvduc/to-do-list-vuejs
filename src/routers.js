@@ -10,6 +10,10 @@ const routers = [
   },
   {
     path: "/home",
+    component: KhungSuonToDoList,
+  },
+  {
+    path: "/about",
     component: WebPageHome,
   },
   {
@@ -22,6 +26,4 @@ const routers = [
   },
 ];
 
-export default {
-  routes: routers,
-};
+export default routers;
