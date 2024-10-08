@@ -8,7 +8,7 @@
   <div class="routerLinkFrame">
     <div class="routerLinkTitle">Router Link</div>
     <div class="routers">
-      <div class="router">Home</div>
+      <router-link> Home </router-link>
       <div class="router">Header</div>
       <div class="router">Content</div>
       <div class="router">Footer</div>

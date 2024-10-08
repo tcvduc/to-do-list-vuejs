@@ -27,32 +27,38 @@
 .subRouters {
   padding-left: 12px;
 }
+a {
+  color: #465e72;
+  text-decoration: none;
+}
 </style>
 
 <template>
   <div class="routeFrame">
     <div class="routeTitle">Route</div>
     <div class="routeList">
+      <router-link class="route" to="/home">Home</router-link>
+
       <div class="route">
         Vue Router
         <div class="subRouters">
-          <div class="subRouter">Router Link</div>
-          <div class="subRouter">Router View</div>
+          <router-link class="subRouter" to="/onboard/routerLink">
+            Router Link
+          </router-link>
+
+          <br />
+
+          <router-link class="subRouter" to="/onboard/routerView">
+            Router View
+          </router-link>
         </div>
       </div>
-      <div class="route">Web Page Home</div>
-      <div class="route">Merchan</div>
+
+      <router-link class="route" to="/merchan">Merchan</router-link>
     </div>
   </div>
 </template>
 
 <script>
-// import Vue from "vue";
-// import KhungSuonToDoList from "./KhungSuonToDoList.vue";
-// import WebPageHome from "./WebPageHome.vue";
-// import VueRouter from "vue-router";
-
-export default {
-  methods: {},
-};
+export default {};
 </script>

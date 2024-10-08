@@ -26,6 +26,8 @@
   <div class="frame">
     <RouteComponent />
 
+    <router-view> </router-view>
+
     <div class="khungSuongToDoList">
       <div class="title">To Do List</div>
 
