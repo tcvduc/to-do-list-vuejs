@@ -53,7 +53,7 @@ a {
         </div>
       </div>
 
-      <RouterLink class="route" to="/merchan">Merchan</RouterLink>
+      <RouterLink class="route" to="/merchant">Merchant</RouterLink>
     </div>
   </div>
 </template>

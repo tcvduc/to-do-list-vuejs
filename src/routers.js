@@ -1,8 +1,7 @@
 import KhungSuonToDoList from "./components/KhungSuonToDoList.vue";
-import WebPageHome from "./components/WebPageHome.vue";
 import RouterLink from "./components/onboard/VueRouter/RouterLink/RouterLink.vue";
 import RouterView from "./components/onboard/VueRouter/RouterView/RouterView.vue";
-
+import MerchantComponent from "./components/MerchantComponent.vue";
 const routers = [
   {
     path: "/",
@@ -13,8 +12,8 @@ const routers = [
     component: KhungSuonToDoList,
   },
   {
-    path: "/about",
-    component: WebPageHome,
+    path: "/merchant",
+    component: MerchantComponent,
   },
   {
     path: "/onboard/routerLink",
