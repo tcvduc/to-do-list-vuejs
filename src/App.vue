@@ -27,8 +27,8 @@
 <template>
   <div id="app">
     <RouteComponent />
-
-    <RouterView />
+    <RouterView name="MerchantComponent" />
+    <RouterView name="KhungSuonToDoList" />
   </div>
 </template>
 

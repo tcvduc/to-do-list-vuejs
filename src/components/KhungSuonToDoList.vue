@@ -43,12 +43,14 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import ThanhNhap from "./ThanhNhap.vue";
 import DanhSachViec from "./DanhSachViec.vue";
-import axios from "axios";
 import StatisticComponent from "./StatisticComponent.vue";
+import axios from "axios";
+</script>
 
+<script>
 const classes = {
   thanhNhap: "thanhNhap",
 };

@@ -76,3 +76,12 @@ export default {
 };
 </script>
 
+8. Lấy vài commit lịch sử để đưa source code về đó
+git log -2
+
+9. Cách tắt màn hình terminal khi bị kẹt, tắt màn hình vim
+q
+
+10. Đưa source code về hash commit
+
+
